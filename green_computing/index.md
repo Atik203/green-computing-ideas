@@ -15,7 +15,7 @@
 |---:|---|---|---:|---:|---:|---|
 | 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; standalone only if it clears K2/K3 and \(E_{val}/E_{train}\ge2\) |
 | 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\) (69.3% savings, \(N^\star=876\)); theory identity holds at \(k=2\) |
-| 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **Pilot queued** — 7.0 paper after repair |
+| 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; Direct→CoT-short break-even 256.7 J/correct; MDE 33% > 25%, no dominated runner-up |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** — NF4 energy loss, no feasible mix at 0.8×FP16, additive \(R^2\) fails |
 | — | G1 | **Carbon-Budgeted Model Cascades for Language-Model Inference** | 4.20 | 4.70 | 3.0 | **KILLED** — GAR + C3PO pre-empt |
 
@@ -47,11 +47,11 @@ The measurement apparatus is sound: idle-subtracted joules, CV below 20%, and en
 
 ## What to Run Next
 
-**Queue:** G5 (running) → G4. G2 is done (MARGINAL); G3 is excluded; G1 was already excluded.
+**Queue:** G4 (running). G2 and G5 are done (both MARGINAL); G3 is excluded; G1 was already excluded.
 
 - **Energy-Optimal Retrieval Depth (G2):** **MARGINAL.** The static 2pp claim is killed (\(k^\star=32\) boundary, bootstrap \(P=0.61\)), but a 5pp margin gives an interior optimum at \(k=4\) with **69.3% savings** and \(N^\star=876\). The energy effect is 3.45× from \(k=1\) to \(k=32\); the optimal-depth identity holds at \(k=2\). Next: \(n\ge500\)–1000 with a pre-specified margin, or query-conditional depth.
-- **Carbon per Correct Answer (G5):** 80 GSM8K + ARC queries; direct / CoT-short / CoT-long / SC3; CPCA, frontier, break-even price, rank reversal. Kill if CV >0.35, MDE >25%, or no reversal.
-- **Certified Energy-Normalized Data Selection (G4):** Pythia-410M LoRA; 500-example arms; optimism, \(E_{val}/E_{train}\), certificate tax. Kill if energy \(R^2<0.90\), optimism <0.5pp, \(n_v>5k\), or gain <0.5pp.
+- **Carbon per Correct Answer (G5):** **MARGINAL.** Pooled CPCA: Direct 21.6 < CoT-short 119.9 < CoT-long 554.8 < SC3 1614.4 J/correct; accuracies .488/.838/.888/.913. Direct is budget-optimal only below 100.4 J/query; the first break-even is 256.7 J/correct [192.8, 387.7]. The fixed-n power gate fires (MDE 33% > 25%), and no dominated runner-up was found. Needs ~387 queries/arm for 15% MDE.
+- **Certified Energy-Normalized Data Selection (G4):** **Running now.** Pythia-410M LoRA; 500-example arms; optimism, \(E_{val}/E_{train}\), certificate tax. Kill if energy \(R^2<0.90\), optimism <0.5pp, \(n_v>5k\), or gain <0.5pp.
 
 **If G4 fails:** the green track has only G2 or G5 as a ~7.0 paper. Do not revive G3 on 0.5B/3060. A minimum viable G3 pivot would need ≥1.5B models, 20–30 reps, and above-chance few-shot accuracy — that is a separate, larger study, not the current pilot.
 

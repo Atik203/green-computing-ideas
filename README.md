@@ -27,7 +27,7 @@ The master prompt and task list are **workspace-level** files kept in the local 
 |---:|---|---|---:|---:|---:|---|
 | 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; must stand alone |
 | 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
-| 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | Pilot queued |
+| 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** |
 | — | G1 | **Carbon-Budgeted Model Cascades for Language-Model Inference** | 4.20 | 4.70 | 3.0 | **KILLED** on prior art |
 
