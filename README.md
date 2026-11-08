@@ -1,7 +1,7 @@
 # Green-Computing Research Ideas — 2026
 
 **Course track:** green computing / sustainable AI  
-**Team:** 3–4 people · 6–7 months · local RTX 3060 6 GB · 24 GB rental available · public data · ≤ $70 cash  
+**Team:** 3–4 people · 4-5 months · local RTX 3060 6 GB · 24 GB rental available · public data · ≤ $50 cash  
 **Target:** a good Q1 paper. A 7+ paper is a strong outcome; 8+ only if genuinely verified.
 
 This repository is the **green-computing track** of a two-track selection package. The data-mining track is separate: **https://github.com/Atik203/data-mining-ideas**.

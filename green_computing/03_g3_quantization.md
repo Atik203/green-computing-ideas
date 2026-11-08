@@ -308,7 +308,7 @@ The value function drops by 0.39 when the budget crosses 0.7 J. A 0.05 J measure
 | Pythia-410M | 0.41B | Independent architecture/tokenizer; replication | FP16 ~0.8 GB |
 | Pythia-1.4B | 1.4B | Independent family at the 1.5B scale | FP16 ~2.8 GB; 4-bit ~0.8 GB |
 
-All are public, non-gated, and small enough for the 3060. The 24 GB rental is optional for the 1.5B FP16 arm at batch 8 (which may be tight on 6 GB) and for more repetitions; at ~$0.3–0.5/h for ~20 h, it is within the $70 budget.
+All are public, non-gated, and small enough for the 3060. The 24 GB rental is optional for the 1.5B FP16 arm at batch 8 (which may be tight on 6 GB) and for more repetitions; at ~$0.3–0.5/h for ~20 h, it is within the $50 budget.
 
 ### 5.2 Data
 
@@ -448,7 +448,7 @@ python dp_allocate.py --energy energy.csv --accuracy acc.csv --budget_frac 0.8
 - **Experiments 7.5:** four small models, two benchmarks, measured energy, interaction study; the empirical gain may be modest and the accuracy MDE is a real constraint. Upside to 8.5 if the pilot shows a ≥3-point gain.
 - **Dataset 8.0:** public benchmarks plus a new per-configuration energy/accuracy dataset (“CarbonQuant-4”), reusable beyond the paper.
 - **Q1 fit 8.0:** `Sustainable Computing: Informatics and Systems`, `IEEE Transactions on Sustainable Computing`, `ACM TACO`, or `Journal of Systems and Software`; the paper has both a systems measurement and a theory component.
-- **Feasibility 8.0:** 3–4 people, 6–7 months; the pilot is 2 h, the full study is 4–6 months; the 3060 is enough for 0.5B/1.5B, the 24 GB rental is optional.
+- **Feasibility 8.0:** 3–4 people, 4-5 months; the pilot is 2 h, the full study is 4–6 months; the 3060 is enough for 0.5B/1.5B, the 24 GB rental is optional.
 - **Compute 8.5:** small models, inference-only, no pretraining; energy measurement is cheap; the main cost is accuracy evaluation, which is bounded.
 - **Independence 7.5/10:** distinct object (layer-wise compression) from G1 (model cascade), G2 (retrieval depth), G4 (data selection), and G5 (reasoning strategies). It shares the “budgeted allocation” mathematics with G1/G4 and the energy measurement with G1/G2/G5, so it is not a 10. The static certification repair is orthogonal to those lanes, hence 7.5; the optional carbon-intensity-conditioned extension would lower this to ~7.0 because it overlaps G1’s time-varying carbon theme. Relative to the prior reasoning/calibration/RAG/watermark portfolio, it is independent; no overlap with those lanes.
 

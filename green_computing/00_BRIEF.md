@@ -2,7 +2,7 @@
 
 **Date:** 8 November 2026.  
 **Theme:** sustainable AI / green computing in LLM, ML, and NLP.  
-**Team:** 3–4 people · 6–7 months · RTX 3060 6 GB local, 24 GB rental possible · ≤ $70 cash · public data · Q1 journal target.
+**Team:** 3–4 people · 4-5 months · RTX 3060 6 GB local, 24 GB rental possible · ≤ $50 cash · public data · Q1 journal target.
 
 **Rules:** This is a separate track. Do not touch `research_audit/round9`, `round10`, or the six running gates. No GPU, no model loads, no HF downloads, no paid API. Web search and CPU-only calculations are allowed. Write only your assigned file under `green_computing/`.
 

@@ -1,7 +1,7 @@
 # Green Computing — Shortlist and Recommendation
 
 **Date:** 8 November 2026. **Theme:** sustainable AI / green computing in LLM, ML, and NLP.  
-**Constraints:** 3–4 people, 6–7 months, RTX 3060 6 GB, 24 GB rental possible, ≤ $70, public data, Q1 target.
+**Constraints:** 3–4 people, 4-5 months, RTX 3060 6 GB, 24 GB rental possible, ≤ $50, public data, Q1 target.
 
 ## Bottom line
 

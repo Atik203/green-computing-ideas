@@ -445,8 +445,8 @@ Rubric: Novelty 25%, Method 20%, Math 15%, Experiments 10%, Dataset 10%, Q1 fit 
 | **Experiments** | 10% | **6.0** | Pilot-scale; two datasets, one or two readers; limited external validity. Needs HotpotQA and a second hardware/split condition for a Q1 experimental section. |
 | **Dataset** | 10% | **7.0** | NQ/SQuAD are public and standard but saturated; add HotpotQA and a distractor stress set. The closed-corpus SQuAD pilot is a strength for isolation, a weakness for realism. |
 | **Q1 fit** | 10% | **8.0** | Green AI + IR + efficiency; fits Q1 journals (IP&M, ACM TOIS, IEEE T-SUSC) and top IR/NLP conferences (SIGIR, EMNLP). The energy/carbon angle is timely. |
-| **Feasibility** | 5% | **8.5** | 3060, public data, 6–7 months; the main risk is measurement noise, not compute. |
-| **Compute** | 5% | **9.0** | CPU/3060; 1.5B–3B Q4; no large models; \(\le \$70\) cash. |
+| **Feasibility** | 5% | **8.5** | 3060, public data, 4-5 months; the main risk is measurement noise, not compute. |
+| **Compute** | 5% | **9.0** | CPU/3060; 1.5B–3B Q4; no large models; \(\le \$50\) cash. |
 
 **Core** \(=(7.0+7.5+7.5+6.0)/4=\) **7.0**.  
 **Weighted** \(=0.25(7.0)+0.20(7.5)+0.15(7.5)+0.10(6.0)+0.10(7.0)+0.10(8.0)+0.05(8.5)+0.05(9.0)=\) **7.35**.
