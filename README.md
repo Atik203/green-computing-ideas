@@ -26,7 +26,7 @@ This repository is the **green-computing track** of a two-track selection packag
 | Rank | ID | Title | Core | Weighted | Indep. | Status |
 |---:|---|---|---:|---:|---:|---|
 | 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; must stand alone |
-| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **Pilot running** |
+| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **Pilot analysis KILL; report pending** |
 | 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | Pilot queued |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** |
 | — | G1 | **Carbon-Budgeted Model Cascades for Language-Model Inference** | 4.20 | 4.70 | 3.0 | **KILLED** on prior art |

@@ -264,7 +264,7 @@ Do not run another broad scan without a new theorem, intervention, or dataset. D
 | Rank | ID | Title | Core | Weighted | Status |
 |---:|---|---|---:|---:|---|
 | 1 | G4 | Certified Energy-Normalized Data Selection for Instruction Tuning | **7.50** | **7.78** | Provisional lead — pilot pending |
-| 2 | G2 | Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation | 7.00 | 7.35 | Pilot running |
+| 2 | G2 | Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation | 7.00 | 7.35 | Pilot analysis KILL; report pending |
 | 3 | G5 | Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies | 7.00 | 7.03 | Pilot queued |
 | — | G3 | Certified Carbon-Aware Quantization and Sparsity Allocation | 7.88 | 7.98 | Killed by pilot |
 | — | G1 | Carbon-Budgeted Model Cascades for Language-Model Inference | 4.20 | 4.70 | Killed on prior art |

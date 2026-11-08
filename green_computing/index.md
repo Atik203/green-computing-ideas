@@ -14,7 +14,7 @@
 | Rank | ID | Title | Core | Weighted | Indep. | Verdict |
 |---:|---|---|---:|---:|---:|---|
 | 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; standalone only if it clears K2/K3 and \(E_{val}/E_{train}\ge2\) |
-| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **Pilot running** — only as certification theory; overlaps G5 |
+| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **Pilot analysis KILL; report pending** — k*=32 boundary, zero savings |
 | 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **Pilot queued** — 7.0 paper after repair |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** — NF4 energy loss, no feasible mix at 0.8×FP16, additive \(R^2\) fails |
 | — | G1 | **Carbon-Budgeted Model Cascades for Language-Model Inference** | 4.20 | 4.70 | 3.0 | **KILLED** — GAR + C3PO pre-empt |
