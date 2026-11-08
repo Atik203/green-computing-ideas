@@ -482,7 +482,7 @@ Rubric: Novelty 25%, Method 20%, Math 15%, Experiments 10%, Dataset 10%, Q1 fit 
 
 - **KILL** the CPCA leaderboard: the estimand is published (Token Arena), the measured version is published (Yang & Armour), and the strategy comparison is published (Mamun; Jin; Kashaniyan). A new table is not a new functional.
 - **CONDITIONAL** on R1: the carbon-effectiveness frontier, failure-inclusive paired estimation, break-even carbon price, and CEAC. This is the nearest defensible repair, and it changes the decision from “rank strategies” to “choose a frontier point at a budget/price.”
-- **Two-week gate:** before committing, run the pilot in §7 and the literature re-check (a new CEAC/CPCA paper could appear between Nov 2026 and the project start). If K4 shows a dominated CPCA runner-up or a budget-dependent reversal, and K1–K3 pass, proceed to a full study. If not, kill R1 and reallocate to G1/G2/G3/G4.
+- **Two-week gate:** before committing, run the pilot in §7 and the literature re-check (a new CEAC/CPCA paper could appear between Nov 2026 and the project start). If K4 shows a dominated CPCA runner-up or a budget-dependent reversal, and K1–K3 pass, proceed to a full study. If not, stop and keep G2/G5 as the green track.
 - **What would upgrade to GO (8+):** a frontier configuration with a robust dominated runner-up, a break-even \(\lambda\) confidence interval narrower than 30%, a success-conditioned reversal, and a clear Q1 venue fit (ACM JCSS, IEEE T-SUSC, or NeurIPS D&B). Without all four, keep it at CONDITIONAL.
 - **What would kill R1:** all arms collinear/on one frontier segment; CPCA confidence intervals too wide at \(n=300\); no strategy-level effect beyond Direct; or a new paper that already applies CEAC to LLM energy.
 
