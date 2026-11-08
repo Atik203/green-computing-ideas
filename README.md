@@ -25,7 +25,7 @@ The master prompt and task list are **workspace-level** files kept in the local 
 
 | Rank | ID | Title | Core | Weighted | Indep. | Status |
 |---:|---|---|---:|---:|---:|---|
-| 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; must stand alone |
+| 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot running; must stand alone |
 | 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
 | 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** |
@@ -33,9 +33,9 @@ The master prompt and task list are **workspace-level** files kept in the local 
 
 **Certified Carbon-Aware Quantization and Sparsity Allocation (G3) was the pre-pilot lead, but its 0.5B/3060 pilot killed it.** NF4 uses **15% more energy** than FP16 on Qwen (11.8% more on Pythia), held-out additive \(R^2\) is 0.506/−0.99, and no layer mix is feasible at \(0.8\times\)FP16. The measurement is a useful negative result: on this GPU, uniform INT8 is the only energy win. See [`green_computing/pilots/03_g3_pilot.md`](green_computing/pilots/03_g3_pilot.md).
 
-**Provisional recommendation:** **Certified Energy-Normalized Data Selection for Instruction Tuning (G4)**, pending its pilot. If G4 fails, the green track falls back to **Energy-Optimal Retrieval Depth (G2)** or **Carbon per Correct Answer (G5)** at ~7.0. G3 should not be revived at 0.5B/3060; a minimum viable pivot needs ≥1.5B models, 20–30 reps, and above-chance few-shot accuracy.
+**Provisional recommendation:** **Certified Energy-Normalized Data Selection for Instruction Tuning (G4)**, pilot running. If G4 fails, the green track falls back to **Energy-Optimal Retrieval Depth (G2)** or **Carbon per Correct Answer (G5)** at ~7.0. G3 should not be revived at 0.5B/3060; a minimum viable pivot needs ≥1.5B models, 20–30 reps, and above-chance few-shot accuracy.
 
-Scores use the Round-8 eight-factor rubric. They are conservative working estimates, **not acceptance probabilities**. Green scores become final only after the G2/G5/G4 pilots land.
+Scores use the Round-8 eight-factor rubric. They are conservative working estimates, **not acceptance probabilities**. Green scores become final only after all green pilots land.
 
 ---
 
@@ -68,7 +68,7 @@ green_computing/
 
 ## What is not here
 
-Raw pilot JSON/CSV, model weights, ledgers, and credentials. G2/G5/G4 pilot reports will be added when they finish.
+Raw pilot JSON/CSV, model weights, ledgers, and credentials. G2/G5 pilot reports are included; G4 will be added when it finishes.
 
 ## Security
 
@@ -76,4 +76,4 @@ No API key, Hugging Face token, or `.env` file is included. The local workspace 
 
 ## Status
 
-Snapshot: **8 November 2026**. G3 is killed; G2 is running; G5 and G4 are queued. The green lead is provisional until G4’s pilot lands.
+Snapshot: **8 November 2026**. G3 is killed; G2 and G5 are done (both MARGINAL); G4 is running. The green lead is provisional until G4's pilot lands.
