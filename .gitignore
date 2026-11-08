@@ -1,0 +1,21 @@
+# Raw data and generated artifacts
+*.jsonl
+*.csv
+*.pt
+*.bin
+*.safetensors
+*.pdf
+*.zip
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+*.key
+*.pem
+id_rsa*
+
+# Runtime folders
+**/queue/
+**/__pycache__/
+**/.ipynb_checkpoints/
