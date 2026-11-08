@@ -25,8 +25,17 @@ The master prompt and task list are **workspace-level** files kept in the local 
 
 | Rank | ID | Title | Core | Weighted | Indep. | Status |
 |---:|---|---|---:|---:|---:|---|
-| 1 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
-| 2 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
+| 1 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 6/10 (3/5) | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
+| 2 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5/10 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
+
+**Independence scale:** G2 was originally scored **3/5**; it is shown as **6/10** for comparison with the 0–10 scores used elsewhere.
+
+## Full eight-factor scores
+
+| ID | Title | Novelty | Method | Math | Experiments | Dataset | Q1 fit | Feasibility | Compute | Core | Weighted | Independence |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| G2 | Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation | 7.0 | 7.5 | 7.5 | 6.0 | 7.0 | 8.0 | 8.5 | 9.0 | **7.00** | **7.35** | 6/10 (3/5) |
+| G5 | Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies | 6.5 | 7.5 | 7.5 | 6.5 | 6.5 | 7.0 | 8.0 | 7.5 | **7.00** | **7.03** | 7.5/10 |
 
 **Recommendation:** take **G2** as the green paper. It has the higher weighted score and the larger effect. **G5** is the independent fallback.
 
