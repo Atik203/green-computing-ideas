@@ -5,52 +5,51 @@
 
 ## Bottom line
 
-**Provisional green lead: Certified Energy-Normalized Data Selection for Instruction Tuning (G4; Core 7.50 / Weighted 7.78).** Its pilot is running. The paper asks whether a selected instruction subset’s quality gain is real at the available energy and evidence budget, or whether the procedure should abstain.
+The green track has **two surviving 7.0 papers**, both **MARGINAL** after their pilots:
 
-The two fallbacks are **Energy-Optimal Retrieval Depth (G2; 7.00/7.35)** and **Carbon per Correct Answer (G5; 7.00/7.03)**. Both pilots are **MARGINAL**: each has a real, decision-relevant result but fails its strictest pre-registered claim.
+1. **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation (G2; 7.00/7.35)** — the stronger quantitative result: a 5pp accuracy margin gives \(k=4\) with **69.3% energy savings**, and the optimal-depth identity holds at \(k=2\).
+2. **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies (G5; 7.00/7.03)** — a budget-indexed reversal and an identified first break-even, but the fixed-n power gate fails.
+
+**Recommendation:** take **G2** as the green paper. It has the higher weighted score and a larger, decision-relevant effect. Use **G5** only if the team wants a more independent measurement paper or if G2’s 5pp-margin framing is rejected.
+
+**No 7.5+ green idea remains.** The track is two honest 7.0 papers, not a 7.9 lead.
 
 ## Ranking
 
 | Rank | ID | Title | Core | Weighted | Indep. | Status |
 |---:|---|---|---:|---:|---:|---|
-| 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Pilot running** — standalone only if it clears K2/K3 and \(E_{val}/E_{train}\ge2\) |
-| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
-| 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
+| 1 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\), 69.3% savings |
+| 2 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **MARGINAL** — budget reversal present; break-even 256.7 J/correct; MDE 33% > 25% |
 
-Scores are pre-pilot research estimates; G4 becomes final only after its pilot lands. They are conservative working estimates, **not acceptance probabilities**.
+Scores are evidence-adjusted working estimates, **not acceptance probabilities**.
 
-## Why G4 is the lead
+## Why G2 is the lead
 
-- **New functional:** certify the selected subset under noisy energy measurements, rather than assert an optimistic point estimate.
-- **Real guarantee shape:** a certification tax \(\tau=\sigma\sqrt{2/n_v}(\sqrt{\log(2M_2/\delta)}-\sqrt{\log(2M_1/\delta)})\) and an abstention floor \(B_{\min}\).
-- **Decision-changing:** tells an engineer whether a selected subset’s advantage is real at the available evidence budget, and when to abstain.
-- **Feasible:** 500-example LoRA arms on Pythia-410M; the pilot is ≤2h on the 3060.
-- **Not pre-empted:** `2610.14028` gives a per-sample-price approximation guarantee; `2410.16208` budgets selection + training cost; SPICE `2601.23155` owns \((1-1/e)\) submodular selection. None gives the finite-sample **certificate** under noisy energy.
+- **Large effect:** \(E(32)/E(1)=3.45\); a 5pp accuracy margin at \(k=4\) saves **69.3%** of energy.
+- **Theory check:** the optimal-depth identity \(kJ'/J=kA'/A\) holds at \(k=2\) (gap +0.044, CI includes zero) and fails at \(k=32\) (+0.700).
+- **Decision-relevant:** the green lever is **prefill of retrieved passages** (85.1% of energy at \(k=32\)), not BM25 retrieval (3.5%).
+- **Feasible:** 200 SQuAD questions; local `qwen3.5:4b`; no paid API.
 
-**Caveat:** if G4’s pilot fails K2/K3, kill it rather than merging it into another idea. It must stand alone.
+**Caveat:** the static 2pp claim is dead. The paper must pre-specify a 5pp margin (or a larger \(n\)) and report the budget-indexed result, not a universal \(k^\star\).
 
-## Survivor results
+## G5 fallback
 
-**G2 — MARGINAL.** 200 SQuAD questions × \(k\in\{0,\dots,32\}\). \(E(32)/E(1)=3.45\); accuracy is flat at 0.520–0.535 for \(k=4\)–16. The static 2pp claim is killed (\(k^\star=32\) boundary, bootstrap \(P=0.61\)), but a 5pp margin gives \(k=4\), **69.3% savings**, \(N^\star=876\). The optimal-depth identity holds at \(k=2\) (+0.044, CI includes 0). The lever is prefill, not BM25: context share reaches 85.1%.
+- Pooled CPCA: Direct **21.6**, CoT-short **119.9**, CoT-long **554.8**, SC3 **1614.4** J/correct.
+- Direct is budget-optimal only below **100.4 J/query**; the first break-even is **256.7 J/correct [192.8, 387.7]**.
+- The fixed-n power gate fires (MDE 33% > 25%); certifying 15% differences needs ~387 queries/arm.
+- No dominated CPCA runner-up was found.
 
-**G5 — MARGINAL.** Pooled CPCA: Direct **21.6**, CoT-short **119.9**, CoT-long **554.8**, SC3 **1614.4** J/correct; accuracies .488/.838/.888/.913. Direct is budget-optimal only below **100.4 J/query**; the first break-even is **256.7 J/correct [192.8, 387.7]**. The fixed-n power gate fires (MDE 33% > 25%), and no dominated runner-up was found. Needs ~387 queries/arm for 15% MDE.
+## What to do next
 
-## What to run next
+**If green is the chosen course track:** write **G2** as a budget-constrained retrieval-depth paper. Pre-specify the accuracy margin, report the 5pp-margin result and the failed 2pp claim, and include the energy-split analysis. Do not claim a universal \(k^\star\).
 
-**G4 is running now.** Pythia-410M LoRA; 500-example arms; optimism, \(E_{val}/E_{train}\), certificate tax. Kill if energy \(R^2<0.90\), optimism <0.5pp, \(n_v>5k\), or gain <0.5pp.
-
-**If G4 fails:** the green track is a **7.0 paper** from G2 or G5. Do not start a new green idea in the remaining time.
-
-## Honest caveat
-
-The green track has no 7.9 executable idea. The best case is G4 at 7.5–7.8 if its pilot clears the evidence gates; otherwise it is a solid 7.0 paper (G2 or G5). The 8+ path is gone at this scale.
+**If G2 is rejected:** write **G5** as a carbon-effectiveness frontier paper with the budget-indexed reversal and break-even price. Report the power limitation openly.
 
 ## Files
 
-- Research reports: `02_g2_green_rag.md`, `04_g4_data_selection.md`, `05_g5_cpca.md`
-- Pilot reports: `pilots/02_g2_pilot.md`, `pilots/05_g5_pilot.md`; G4 pending
-- Ledgers: `ledger_g2.csv`, `ledger_g4.csv`, `ledger_g5.csv`
+- Research reports: `02_g2_green_rag.md`, `05_g5_cpca.md`
+- Pilot reports: `pilots/02_g2_pilot.md`, `pilots/05_g5_pilot.md`
+- Ledgers: `ledger_g2.csv`, `ledger_g5.csv`
 - Plain-language pages:
   - `ideas/energy-optimal-retrieval-depth.md` — G2
-  - `ideas/certified-data-selection.md` — G4
   - `ideas/carbon-per-correct-answer.md` — G5
