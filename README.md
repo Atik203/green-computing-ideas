@@ -16,7 +16,6 @@ This repository is the **green-computing track** of a two-track selection packag
 | One page per green idea | [`green_computing/ideas/`](green_computing/ideas/) |
 | The five research reports | [`green_computing/`](green_computing/) |
 | The pilot protocol and G3 result | [`green_computing/pilots/`](green_computing/pilots/) |
-| Reusable research prompts | [`prompts/`](prompts/) |
 
 ---
 
@@ -38,6 +37,20 @@ Scores use the Round-8 eight-factor rubric. They are conservative working estima
 
 ---
 
+## Idea pages
+
+Each page has the same sections: **What / Why / How / Dataset / Method / Expected / Results / Outcome**.
+
+| Idea | Page |
+|---|---|
+| G4′ — certified data selection | [`04_g4_data_selection.md`](green_computing/ideas/04_g4_data_selection.md) |
+| G2 — energy-optimal retrieval depth | [`02_g2_green_rag.md`](green_computing/ideas/02_g2_green_rag.md) |
+| G5′ — CPCA-CEA | [`05_g5_cpca.md`](green_computing/ideas/05_g5_cpca.md) |
+| G3′ — certified quantization/sparsity allocation | [`03_g3_quantization.md`](green_computing/ideas/03_g3_quantization.md) |
+| G1 — carbon-budgeted cascade | [`01_g1_cascade.md`](green_computing/ideas/01_g1_cascade.md) |
+
+---
+
 ## What is inside
 
 ```
@@ -49,9 +62,6 @@ green_computing/
 └── pilots/
     ├── 00_PILOT_BRIEF.md
     └── 03_g3_pilot.md
-prompts/
-├── Research_Novelty_Investigation_Master_Prompt.md
-└── TEAM_IDEA_VALIDATION_PROMPT.md
 ```
 
 ## What is not here
