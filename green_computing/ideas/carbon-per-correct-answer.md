@@ -1,4 +1,6 @@
-# G5 — Carbon per Correct Answer (CPCA) Benchmark
+# Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies
+
+**Internal short name:** G5
 
 **One-line:** Measure joules per correct answer for reasoning strategies — direct answer, CoT, self-consistency, debate — and report the carbon-effectiveness frontier.  
 **Score:** Core **7.00** / Weighted **7.03** (repaired G5′); original **4.00 / 4.63 — KILLED**.  

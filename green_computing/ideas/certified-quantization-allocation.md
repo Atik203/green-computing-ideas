@@ -1,4 +1,6 @@
-# G3 — Certified Carbon-Aware Quantization / Sparsity Allocation
+# Certified Carbon-Aware Quantization and Sparsity Allocation
+
+**Internal short name:** G3
 
 **One-line:** Allocate bits and structured sparsity across layers to maximize accuracy under a measured energy budget — with a certificate that accounts for noisy energy measurements.  
 **Score:** Pre-pilot Core **7.88** / Weighted **7.98** — **PILOT KILL**.  

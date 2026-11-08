@@ -1,4 +1,6 @@
-# G4 — Energy-Normalized Data Selection for Instruction Tuning
+# Certified Energy-Normalized Data Selection for Instruction Tuning
+
+**Internal short name:** G4
 
 **One-line:** Select the instruction examples that give the most quality per joule of fine-tuning, with a certificate rather than an optimistic point estimate.  
 **Score:** Core **7.50** / Weighted **7.78** (repaired G4′); original **5.88 / 6.25 — KILLED**.  

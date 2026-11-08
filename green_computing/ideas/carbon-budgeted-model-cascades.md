@@ -1,4 +1,6 @@
-# G1 — Carbon-Budgeted Model Cascade
+# Carbon-Budgeted Model Cascades for Language-Model Inference
+
+**Internal short name:** G1
 
 **One-line:** Route each query to a small, medium, or large model under a hard carbon budget and a latency SLA.  
 **Score:** Core **4.20** / Weighted **4.70** — **KILLED**.  

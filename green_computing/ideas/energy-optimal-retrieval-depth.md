@@ -1,4 +1,6 @@
-# G2 — Energy-Optimal Retrieval Depth (Green RAG)
+# Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation
+
+**Internal short name:** G2
 
 **One-line:** Find the retrieval depth \(k^\star\) that minimizes joules per correct answer, not just latency or tokens.  
 **Score:** Core **7.00** / Weighted **7.35** — **CONDITIONAL**.  
