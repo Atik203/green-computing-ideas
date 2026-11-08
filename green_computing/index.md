@@ -14,7 +14,7 @@
 | Rank | ID | Title | Core | Weighted | Indep. | Verdict |
 |---:|---|---|---:|---:|---:|---|
 | 1 | G4 | **Certified Energy-Normalized Data Selection for Instruction Tuning** | **7.50** | **7.78** | 7.0 | **Provisional lead** — pilot queued; standalone only if it clears K2/K3 and \(E_{val}/E_{train}\ge2\) |
-| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **Pilot analysis KILL; report pending** — k*=32 boundary, zero savings |
+| 2 | G2 | **Energy-Optimal Retrieval Depth in Retrieval-Augmented Generation** | 7.00 | 7.35 | 3.0 | **MARGINAL** — static 2pp claim killed; 5pp margin PASS at \(k=4\) (69.3% savings, \(N^\star=876\)); theory identity holds at \(k=2\) |
 | 3 | G5 | **Carbon per Correct Answer: A Carbon-Effectiveness Frontier for Reasoning Strategies** | 7.00 | 7.03 | 7.5 | **Pilot queued** — 7.0 paper after repair |
 | — | G3 | **Certified Carbon-Aware Quantization and Sparsity Allocation** | 7.88 | 7.98 | 7.5 | **KILLED by pilot** — NF4 energy loss, no feasible mix at 0.8×FP16, additive \(R^2\) fails |
 | — | G1 | **Carbon-Budgeted Model Cascades for Language-Model Inference** | 4.20 | 4.70 | 3.0 | **KILLED** — GAR + C3PO pre-empt |
@@ -47,9 +47,9 @@ The measurement apparatus is sound: idle-subtracted joules, CV below 20%, and en
 
 ## What to Run Next
 
-**Queue:** G2 (running) → G5 → G4. G3 is excluded; G1 was already excluded.
+**Queue:** G5 (running) → G4. G2 is done (MARGINAL); G3 is excluded; G1 was already excluded.
 
-- **Energy-Optimal Retrieval Depth (G2):** 150–200 SQuAD questions, \(k\in\{0,1,2,4,8,16,32\}\), \(E(k)=J/\text{correct}\), interior \(k^\star\). Kill if relative energy effect <10%, \(k^\star\) at boundary, or adaptive gain <15%.
+- **Energy-Optimal Retrieval Depth (G2):** **MARGINAL.** The static 2pp claim is killed (\(k^\star=32\) boundary, bootstrap \(P=0.61\)), but a 5pp margin gives an interior optimum at \(k=4\) with **69.3% savings** and \(N^\star=876\). The energy effect is 3.45× from \(k=1\) to \(k=32\); the optimal-depth identity holds at \(k=2\). Next: \(n\ge500\)–1000 with a pre-specified margin, or query-conditional depth.
 - **Carbon per Correct Answer (G5):** 80 GSM8K + ARC queries; direct / CoT-short / CoT-long / SC3; CPCA, frontier, break-even price, rank reversal. Kill if CV >0.35, MDE >25%, or no reversal.
 - **Certified Energy-Normalized Data Selection (G4):** Pythia-410M LoRA; 500-example arms; optimism, \(E_{val}/E_{train}\), certificate tax. Kill if energy \(R^2<0.90\), optimism <0.5pp, \(n_v>5k\), or gain <0.5pp.
 
