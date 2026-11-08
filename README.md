@@ -12,10 +12,12 @@ This repository is the **green-computing track** of a two-track selection packag
 
 | If you want… | Read |
 |---|---|
+| The one master prompt | [`MASTER_PROMPT.md`](MASTER_PROMPT.md) |
 | The green ranking and recommendation | [`green_computing/index.md`](green_computing/index.md) |
 | One page per green idea | [`green_computing/ideas/`](green_computing/ideas/) |
 | The five research reports | [`green_computing/`](green_computing/) |
 | The pilot protocol and G3 result | [`green_computing/pilots/`](green_computing/pilots/) |
+| The live task list | [`TODO.md`](TODO.md) |
 
 ---
 
